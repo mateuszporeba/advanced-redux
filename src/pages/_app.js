@@ -1,5 +1,21 @@
-import '@/styles/globals.css'
+import Cart from './components/Cart/Cart';
+import Layout from './components/Layout/Layout';
+import Products from './components/Shop/Products';
 
-export default function App({ Component, pageProps }) {
-  return <Component {...pageProps} />
+import '../styles/globals.css'
+
+import store from '@/pages/components/Store/Store'
+import { Provider } from 'react-redux'
+
+function App() {
+  return (
+    <Provider store={store}>
+      <Layout>
+        <Cart />
+        <Products />
+      </Layout>
+    </Provider>
+  );
 }
+
+export default App;
