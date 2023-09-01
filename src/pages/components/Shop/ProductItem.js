@@ -1,7 +1,7 @@
 import Card from '../UI/Card'
 import classes from './ProductItem.module.css'
 
-import { useSelector, useDispatch } from 'react-redux'
+import { useDispatch } from 'react-redux'
 import { addItemToCart } from '../Store/CartItemsSlice'
 
 const ProductItem = (props) => {
@@ -11,7 +11,7 @@ const ProductItem = (props) => {
 
   const onAddToCartHandler = () => {
     dispatch(addItemToCart({ title, price }))
-    console.log('btn_click')
+    console.log('btn_click: ' + title)
   }
 
   return (

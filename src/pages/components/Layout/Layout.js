@@ -4,7 +4,7 @@ import MainHeader from './MainHeader';
 const Layout = (props) => {
   return (
     <Fragment>
-      <MainHeader />
+      <MainHeader toogleCartComponent={() => props.toogleCartComponent()}/>
       <main>{props.children}</main>
     </Fragment>
   );

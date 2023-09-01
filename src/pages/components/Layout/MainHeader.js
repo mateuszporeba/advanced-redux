@@ -8,7 +8,7 @@ const MainHeader = (props) => {
       <nav>
         <ul>
           <li>
-            <CartButton />
+            <CartButton toogleCartComponent={() => props.toogleCartComponent()}/>
           </li>
         </ul>
       </nav>

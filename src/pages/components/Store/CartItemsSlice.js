@@ -5,6 +5,7 @@ export const cartItemsSlice = createSlice({
   initialState: [],
   reducers: {
     addItemToCart: (state, action) => {
+      console.log('in addItemToCart reducer! ')
       const newItem = action.payload
       const existingItem = state.find(item => item.title === newItem.title)
 
