@@ -11,7 +11,7 @@ export const cartItemsSlice = createSlice({
 
       if (existingItem) {
         // If item already exists, update the quantity
-        existingItem.quantity += 1
+        existingItem.quantity++
       } else {
         // If item doesn't exist, add it to the cart
         newItem.quantity = 1
